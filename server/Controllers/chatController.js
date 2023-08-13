@@ -19,7 +19,7 @@ const createChat = async (req, res) => {
       members: [firstId, secondId],
     });
 
-    const responst = await newChat.save();
+    const response = await newChat.save();
 
     res.status(200).json(response);
   } catch (error) {
@@ -51,9 +51,11 @@ const findChats = async (req, res) => {
       members: { $in: [firstId, secondId] },
     });
 
-    res.status(200).json(chats);
+    res.status(200).json(chat);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
   }
 };
+
+module.exports = {createChat,findUserChats,findChats};

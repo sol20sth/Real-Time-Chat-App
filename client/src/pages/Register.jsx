@@ -66,7 +66,7 @@ const Register = () => {
               {registerError?.error && (
                 <Alert variant="danger">
                   {" "}
-                  //에러처리나면 해당 메세지 나오게 처리
+                  {/* 에러처리나면 해당 메세지 나오게 처리 */}
                   <p>{registerError?.message}</p>
                 </Alert>
               )}

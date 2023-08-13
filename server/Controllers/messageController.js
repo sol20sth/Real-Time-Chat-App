@@ -24,7 +24,7 @@ const getMessages = async(req, res) => {
 
   try{
     const message =await messageModel.findById({chatId})
-    res.status(200).json(messages);
+    res.status(200).json(message);
   }catch(error){
     console.log(error);
     res.status(500).json(error);
@@ -32,4 +32,4 @@ const getMessages = async(req, res) => {
 
 }
 
-module.exports = {createMessage};
+module.exports = {createMessage,getMessages};
